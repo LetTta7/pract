@@ -1,0 +1,115 @@
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .burger-menu.active .burger-icon {
+        background-color: red;
+    }
+
+    .burger-nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 3rem;
+        left: 0;
+        width: 100%;
+        background-color: #ffecec;
+        box-shadow: 0 0 20px #ff0000;
+        z-index: 999;
+    }
+
+    .burger-nav.active {
+        display: flex;
+    }
+
+    .burger-link {
+        padding: 1rem;
+        color: #000;
+        text-decoration: none;
+        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .burger-link:active {
+        background-color: #ffd1d1;
+        color: #ff0000;
+    }
+
+    .burger-link:hover {
+        background-color: #ffd1d1;
+    }
+
+    .burger-icon.active {
+        background-color: red;
+        /* Добавьте стили для иконки крестика */
+    }
+
+    .form {
+        padding: 10px 20px;
+        /* background-color: #ff00000; */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .burger-menu .burger-icon {
+        background-color: transparent;
+        /* Цвет иконки, если неактивно */
+        width: 20px;
+        /* Ширина иконки */
+        height: 2px;
+        /* Высота иконки */
+        margin-bottom: 4px;
+        /* Расстояние между иконками */
+    }
+
+    .burger-menu.active .burger-icon {
+        background-color: transparent;
+        /* Цвет иконки, если активно */
+    }
+
+    .burger-menu.active .burger-icon::before,
+    .burger-menu.active .burger-icon::after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 25px;
+        background-color: #ff0000;
+        top: calc(50% - 10px);
+        left: calc(50% - 1px);
+    }
+
+    .burger-menu.active .burger-icon::before {
+        transform: rotate(45deg);
+    }
+
+    .burger-menu.active .burger-icon::after {
+        transform: rotate(-45deg);
+    }
+
+    .burger-menu .burger-icon {
+        background-color: #000000;
+        /* Цвет иконки, если неактивно */
+        width: 30px;
+        /* Ширина иконки */
+        height: 2px;
+        /* Высота иконки */
+        margin-bottom: 4px;
+        /* Расстояние между иконками */
+    }
+
+}
